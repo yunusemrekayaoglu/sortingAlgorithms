@@ -2,34 +2,35 @@
 #define SORTINGALGORITHMS_SELECTIONSORT_H
 
 /*
- * bir  veriyi bir kendinden önceki veriyle karşılaştırıp küçük
+ * bir  veriyi  kendisinden sonraki verilerle karşılaştırıp küçük
  * olan veriyi, kendisinden önceki sıraya koyan veri algoritmasıdır.
+ * Örnek; 5, 14, 13, 23, 45, 231, 18
+ * 1. Adım: 5 < 14 ? True
+ * 2. Adım: 5, 14, 13, 23, 45, 231, 18
+ * 3. Adım: 14 < 13 ? False
+ * 4. Adım: 5, 13, 14, 23, 45, 231, 18
+ * ... Adım: 5, 13, 14, 18,23, 45, 231
  *
 */
 
-#include <bits/stdc++.h>
+
 #include <iostream>
 
-void swap(int *xp, int *yp)
-{
-    int temp = *xp;
-    *xp = *yp;
-    *yp = temp;
-}
 
 void selectionSort(int arr[], int n)
 {
+    int temp;
     int min;
-    for (int i = 0; i < n - 1; i++)
-    {
+    for (int i = 0; i < n - 1; i++) {
         min = i;
-        for (int j = i + 1; j < n; j++)
-        {
-            if(arr[j] < arr[min])
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[min])
                 min = j;
         }
-        if (min != i)
-            swap(&arr[min], &arr[i]);
+
+        temp = arr[i];
+        arr[i] = arr[min];
+        arr[min] = temp;
     }
 }
 
