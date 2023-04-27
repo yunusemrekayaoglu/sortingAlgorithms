@@ -51,28 +51,70 @@ void merge(int arr[], int const left, int const mid, int const right)
 
     auto indexOfSubArrOne = 0; // ilk alt dizinin ilk elemanı
     auto indexOfSubArrTwo = 0; // ikinci alt dizinin ilk elemanı
-    int indexOfMergedArray = left; // birleştirilen dizinin ilk elemanı
+    int indexOfMergedArr = left; // birleştirilen dizinin ilk elemanı
 
     while(indexOfSubArrOne < subArrOne && indexOfSubArrTwo < subArrTwo)
     {
         if(leftArr[indexOfSubArrOne] <= rightArr[indexOfSubArrTwo])
         {
-            arr[indexOfMergedArray] = leftArr[indexOfSubArrOne];
+            arr[indexOfMergedArr] = leftArr[indexOfSubArrOne];
             indexOfSubArrOne ++;
         }
         else
         {
-            arr[indexOfMergedArray] = rightArr[indexOfSubArrTwo];
+            arr[indexOfMergedArr] = rightArr[indexOfSubArrTwo];
             indexOfSubArrTwo++;
         }
-        indexOfMergedArray++;
+        indexOfMergedArr++;
     }
 
-//    while(indexOfSubArrOne < subArrOne)
-//    {
-//        arr[indexOfMergedArray] =
-//    }
 
+    // Kalan elemanları kopyala
+    // eğer left[], alt dizisinde kalan varsa
+    while(indexOfSubArrOne < subArrOne)
+    {
+        arr[indexOfMergedArr] = leftArr[indexOfSubArrOne];
+        indexOfSubArrOne++;
+        indexOfMergedArr++;
+    }
+
+
+    // Kalan elemanları kopyala
+    // eğer right[], alt dizisinde kalan varsa
+    while(indexOfSubArrTwo < subArrTwo)
+    {
+        arr[indexOfMergedArr] = rightArr[indexOfSubArrTwo];
+        indexOfSubArrTwo++;
+        indexOfMergedArr++;
+    }
+    delete[] leftArr;
+    delete[] rightArr;
+}
+
+
+
+//alt dizin için;
+// 'begin' soldaki eleman ve 'end' ise sağdaki eleman
+// aralarında küçükten büyüğe sırala
+
+void mergeSort(int arr[], int const begin, int const end)
+{
+    if(begin >= end)
+        return;  // tekrarlı olarak döndür.
+
+
+    auto mid = begin + (end - begin) / 2;
+    mergeSort(arr, begin, mid);
+    mergeSort(arr, mid + 1, end);
+    merge(arr, begin, mid, end);
+}
+
+
+//Diziyi ekrana yazdırmak için kullanılan fonksiyon
+void printMergeSortArray(int arr[], int n)
+{
+    for(auto i = 0; i < n; i++)
+        std::cout << arr[i] << " ";
 }
 
 
