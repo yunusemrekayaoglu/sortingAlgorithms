@@ -4,6 +4,8 @@
 #include "mergeSort.h"
 #include "heapSortv1.h"
 #include "heapSortv2.h"
+#include "countingSort.h"
+
 int main() {
 //    int arr[] = {5, 14, 13, 23, 45, 231, 18};
 //    int n = sizeof(arr)/sizeof(arr[0]);
@@ -47,14 +49,20 @@ int main() {
 //        printHeapSort(arr, n);
 
 
-    int arr[] = {60, 40, 30, 20, 80, 40, 15, 100};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    heapSortv2(arr, n);
+//    int arr[] = {60, 40, 30, 20, 80, 40, 15, 100};
+//    int n = sizeof(arr) / sizeof(arr[0]);
+//    heapSortv2(arr, n);
+//
+//    std::cout << "Sorted array is \n";
+//    for(int i = 0; i < n; i++)
+//        std::cout << arr[i] << " ";
+//    std::cout << std::endl;
 
-    std::cout << "Sorted array is \n";
-    for(int i = 0; i < n; i++)
-        std::cout << arr[i] << " ";
-    std::cout << std::endl;
+
+int arr[] = {1, 3, 6, 51, 123, 456734, 4, 5, 6, 1, 5, 8, 9};
+int n = sizeof(arr) / sizeof(arr[0]);
+    countSort(arr, n);
+
 
     return 0;
 }
