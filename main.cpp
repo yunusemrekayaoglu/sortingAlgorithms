@@ -5,6 +5,7 @@
 #include "heapSortv1.h"
 #include "heapSortv2.h"
 #include "countingSort.h"
+#include "bubbleSort.h"
 
 int main() {
 //    int arr[] = {5, 14, 13, 23, 45, 231, 18};
@@ -59,9 +60,14 @@ int main() {
 //    std::cout << std::endl;
 
 
-int arr[] = {1, 3, 6, 51, 123, 456734, 4, 5, 6, 1, 5, 8, 9};
-int n = sizeof(arr) / sizeof(arr[0]);
-    countSort(arr, n);
+//    int arr[] = {1, 3, 6, 51, 123, 456734, 4, 5, 6, 1, 5, 8, 9};
+//    int n = sizeof(arr) / sizeof(arr[0]);
+//    countSort(arr, n);
+
+    int arr[] = {1, 32, 4, 123, 451, 123, 444, 11234, 123412, 5455};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    bubbleSort(arr, n);
+    printBubbleSort(arr, n);
 
 
     return 0;
