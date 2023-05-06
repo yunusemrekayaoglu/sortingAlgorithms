@@ -6,6 +6,7 @@
 #include "heapSortv2.h"
 #include "countingSort.h"
 #include "bubbleSort.h"
+#include "gnomeSort.h"
 
 int main() {
 //    int arr[] = {5, 14, 13, 23, 45, 231, 18};
@@ -64,11 +65,14 @@ int main() {
 //    int n = sizeof(arr) / sizeof(arr[0]);
 //    countSort(arr, n);
 
-    int arr[] = {1, 32, 4, 123, 451, 123, 444, 11234, 123412, 5455};
+//    int arr[] = {1, 32, 4, 123, 451, 123, 444, 11234, 123412, 5455};
+//    int n = sizeof(arr) / sizeof(arr[0]);
+//    bubbleSort(arr, n);
+//    printBubbleSort(arr, n);
+
+    int arr[] = {2, 6, 8, 1, 3, 7, 4, 9, 0, 5};
     int n = sizeof(arr) / sizeof(arr[0]);
-    bubbleSort(arr, n);
-    printBubbleSort(arr, n);
-
-
+    gnomeSort(arr, n);
+    printGnomeSort(arr, n);
     return 0;
 }
