@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "selectionSort.h"
 #include "quickSort.h"
 #include "mergeSort.h"
@@ -7,7 +8,7 @@
 #include "countingSort.h"
 #include "bubbleSort.h"
 #include "gnomeSort.h"
-
+#include "insertionSort.h"
 int main() {
 //    int arr[] = {5, 14, 13, 23, 45, 231, 18};
 //    int n = sizeof(arr)/sizeof(arr[0]);
@@ -70,9 +71,14 @@ int main() {
 //    bubbleSort(arr, n);
 //    printBubbleSort(arr, n);
 
-    int arr[] = {2, 6, 8, 1, 3, 7, 4, 9, 0, 5};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    gnomeSort(arr, n);
-    printGnomeSort(arr, n);
+//    int arr[] = {2, 6, 8, 1, 3, 7, 4, 9, 0, 5};
+//    int n = sizeof(arr) / sizeof(arr[0]);
+//    gnomeSort(arr, n);
+//    printGnomeSort(arr, n);
+
+    std::vector<int> arr = {12, 11, 13, 5, 6};
+    int n = arr.size();
+    insertionSort(arr, n);
+    printInsertionSort(arr, n);
     return 0;
 }

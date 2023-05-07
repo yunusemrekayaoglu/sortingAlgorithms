@@ -1,7 +1,7 @@
 #ifndef SORTINGALGORITHMS_GNOMESORT_H
 #define SORTINGALGORITHMS_GNOMESORT_H
 #include <iostream>
-
+#include <vector>
 /* Gnome Sort
  * - Yanyana duran ve sıralamayı bozan ikili bulana kadar
  * devam edilir.
@@ -32,7 +32,7 @@
  *  n. Adım:
  *  0, 1, 2, 3, 4, 5, 6, 7, 8, 9
  */
-void gnomeSort(int arr[], int n)
+void gnomeSort(std::vector<int>& arr, int n)
 {
     int index = 0;
 
@@ -51,11 +51,14 @@ void gnomeSort(int arr[], int n)
     return;
 }
 
-void printGnomeSort(int arr[], int n)
+void printGnomeSort(std::vector<int>arr, int n)
 {
     std::cout << "Sorted sequence after gnomeSort: ";
     for(int i = 0; i < n; i++)
+    {
         std::cout << arr[i] << " ";
+
+    }
     std::cout << "\n";
 }
 
