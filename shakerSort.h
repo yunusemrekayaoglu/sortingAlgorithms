@@ -87,7 +87,7 @@ void shakerSort(int a[], int n)
             }
         }
 
-        //Başlangıç noktasını artırdık. Çünkü son aşama, bir sonraki en küçük sayıyı
+        // Başlangıç noktasını artırdık. Çünkü son aşama, bir sonraki en küçük sayıyı
         // doğru yere taşımış olacaktır.
         start++;
 
