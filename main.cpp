@@ -9,6 +9,8 @@
 #include "bubbleSort.h"
 #include "gnomeSort.h"
 #include "insertionSort.h"
+#include "shakerSort.h"
+
 int main() {
 //    int arr[] = {5, 14, 13, 23, 45, 231, 18};
 //    int n = sizeof(arr)/sizeof(arr[0]);
@@ -76,9 +78,15 @@ int main() {
 //    gnomeSort(arr, n);
 //    printGnomeSort(arr, n);
 
-    std::vector<int> arr = {12, 11, 13, 5, 6};
-    int n = arr.size();
-    insertionSort(arr, n);
-    printInsertionSort(arr, n);
+//    std::vector<int> arr = {12, 11, 13, 5, 6};
+//    int n = arr.size();
+//    insertionSort(arr, n);
+//    printInsertionSort(arr, n);
+
+    int a[] = {5, 1, 4, 2, 8, 0, 2};
+    int n = sizeof(a) / sizeof(a[0]);
+    shakerSort(a, n);
+    printShakerSort(a, n);
+
     return 0;
 }
