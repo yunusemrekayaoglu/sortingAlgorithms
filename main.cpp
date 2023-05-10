@@ -10,6 +10,7 @@
 #include "gnomeSort.h"
 #include "insertionSort.h"
 #include "shakerSort.h"
+#include "shellSort.h"
 
 int main() {
 //    int arr[] = {5, 14, 13, 23, 45, 231, 18};
@@ -83,10 +84,20 @@ int main() {
 //    insertionSort(arr, n);
 //    printInsertionSort(arr, n);
 
-    int a[] = {5, 1, 4, 2, 8, 0, 2};
-    int n = sizeof(a) / sizeof(a[0]);
-    shakerSort(a, n);
-    printShakerSort(a, n);
+//    int a[] = {5, 1, 4, 2, 8, 0, 2};
+//    int n = sizeof(a) / sizeof(a[0]);
+//    shakerSort(a, n);
+//    printShakerSort(a, n);
+
+    int arr[] = {5, 7, 2, 9, 6, 1, 3};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    std::cout << "Before sorting: \n";
+    printShellSort(arr, n);
+
+    std::cout << "\nAfter sorting: \n";
+    shellSort(arr, n);
+    printShellSort(arr, n);
 
     return 0;
 }
