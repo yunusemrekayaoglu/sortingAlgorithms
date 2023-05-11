@@ -2,22 +2,7 @@
 #define SORTINGALGORITHMS_COUNTINGSORT_H
 #include <iostream>
 #include <string.h>
-/*
- * Sayarak Sıralama (counting sort)
- * Bu sıralama algoritması veri(ler)in hafızada tutulması için geliştirilen sıralama
- * algoritmalarından bir tanesidir.
- * Çalışma mantığı: Sıralanacak olan dizideki her sayının kaç tane olduğunu farklı bir
- * dizide sayar. Sonrasında bu sayıların bulunduğu dizinin üzerinde bir işlemle sıralanmış
- * olan diziyi elde eder.
- *
- * Sıralamak istediğimiz veri: 5, 7, 2, 9, 6, 1, 3, 7
- *
- * Dizi indisi:    0 1 2 3 4 5 6 7 8 9
- * Değeri (count): 0 1 1 1 0 1 1 2 0 1
- *
- * Eğer bu koda optimizasyon işlemleri yapılmazsa büyük verisetlerinde çok fazla boş
- * değer döndüreceğinden hem zamanı hem de belleği gereksiz yere kullanacaktır.
- */
+
 
 
 void countSort(int arr[], int n)

@@ -2,53 +2,7 @@
 #define SORTINGALGORITHMS_HEAPSORTV1_H
 #include <iostream>
 
-/*
- * Parent = i/2,
- * Left = 2i
- * Right = 2i + 1
- * Kökteki elemanı sil
- * en sağdaki elemanı köke taşı
- * tekrar et heap'i düzelt
- * Sondaki eleman ile kökteki elemanın yerini değştiriyoruz
- * Max heap:
- *                        20
- *                       /  \
- *                      12  18
- *                     / \   /
- *                    5  3  4
- *
- * Bu ağacın en büyük değeri en üstte durmakta. Bu değer alınarak sonuç
- * dizisinin son elemanı yapılırsa ve sonra geriye kalan sayılar tekrar
- * yığınlanırsa ve bu işlem eleman kalmayana kadar tekrarlanırsa sonuç
- * dizisindeki veriler sıralanmış olarak elde edilir.
- *
- * Sonuç dizisi : (20)
- *
- *                        18
- *                       /  \
- *                      12  4
- *                     / \
- *                    5  3
- *
- * Sonuç dizisi: (20, 18)
- *
- *                        12
- *                       /  \
- *                      5    4
- *                     /
- *                    3
- * Sonuç dizisi : (20, 18, 12)
- *
- *                         5
- *                       /  \
- *                      3    4
- * Sonuç dizisi: (20, 18, 12, 5)
- *
- *                        4
- *                       /
- *                      3
- * Sonuç dizisi: (20, 18, 12, 5, 4, 3)
- */
+
 
 
 // n boyutlu bir heap dizsiinde, i indisine sahip bir düğümün

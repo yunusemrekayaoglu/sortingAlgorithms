@@ -1,31 +1,6 @@
 #ifndef SORTINGALGORITHMS_SHELLSORT_H
 #define SORTINGALGORITHMS_SHELLSORT_H
 #include <iostream>
-/* shellSort
- * Bu algoritmada;
- * Sıralama işlemi için öncelikle bir atlama miktarı belirlenir. Atlama miktarı belirlenmesi için
- * en basit yöntem dizideki sayıların yarısından başlamaktır.
- * Örnek dizi: 5, 7, 2, 9, 6, 1, 3
- * Bu dizide 7 sayı olduğu için atlama miktarı 3 ile başlanır.
- *                  5, 7, 2
- *                  9, 6, 1
- *                  3
- *              Her sütunu kendi içinde küçükten büyüğe sırala.
- *                  3, 6, 1
- *                  5, 7, 2
- *                  9
- *              Oluşan yeni dizi: 3, 6, 1, 5, 7, 2, 9
- *              Oluşan yeni diziyi 3 / 2 = 1 şeklinde sıraladığımızda oluşan yeni hali:
- *                  1,
- *                  2,
- *                  3,
- *                  5,
- *                  6,
- *                  7,
- *                  9
- *              olacaktır ve oluşan yeni dizi: 1, 2, 3, 5, 6, 7, 9 şeklinde sıralanacaktır.
- *
- */
 
 int shellSort(int arr[], int n)
 {

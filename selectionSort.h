@@ -1,17 +1,6 @@
 #ifndef SORTINGALGORITHMS_SELECTIONSORT_H
 #define SORTINGALGORITHMS_SELECTIONSORT_H
 
-/*
- * bir  veriyi  kendisinden sonraki verilerle karşılaştırıp küçük
- * olan veriyi, kendisinden önceki sıraya koyan veri algoritmasıdır.
- * Örnek; 5, 14, 13, 23, 45, 231, 18
- * 1. Adım: 5 < 14 ? True
- * 2. Adım: 5, 14, 13, 23, 45, 231, 18
- * 3. Adım: 14 < 13 ? False
- * 4. Adım: 5, 13, 14, 23, 45, 231, 18
- * ... Adım: 5, 13, 14, 18,23, 45, 231
- *
-*/
 
 
 #include <iostream>
